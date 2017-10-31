@@ -4,7 +4,8 @@ pacients = [{
                 id_number: '001-010180-0001A',
                 email: 'jdoe@conmed.com',
                 age: 37,
-                gender: 1
+                gender: 1,
+                record_number: '000-000-0001'
             },
             {
                 first_name:  'Ana',
@@ -12,7 +13,8 @@ pacients = [{
                 id_number: '002-020200-004X',
                 email: 'abanana@conmed.com',
                 age: 17,
-                gender: 2
+                gender: 2,
+                record_number: '000-000-0002'
             }]
 
 
@@ -25,5 +27,6 @@ pacients.each do |p|
     a.email = p[:email]
     a.age = p[:age]
     a.gender_id = p[:gender]
+    a.record_number = p[:record_number]
   end
 end
