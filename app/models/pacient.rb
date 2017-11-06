@@ -5,6 +5,7 @@ class Pacient < ActiveRecord::Base
   validates :last_name, presence: true
   validates :age, presence: true
   validates :gender_id, presence: true
+  validates :record_number, presence: true
 
 
   def display_name
