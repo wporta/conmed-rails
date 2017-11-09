@@ -24,16 +24,22 @@
     </thead>
     <tbody>
       <% @records.each do |p| %>
+        <%
+          deleted_background_color = ""
+          if !p.pacient_active
+            deleted_background_color = "lightblue"
+          end
+        %>
         <tr>
-          <td><%= p.record_number %></td>
-          <td><%= p.first_name %></td>
-          <td><%= p.last_name %></td>
-          <td><%= Gender.find(p.gender_id).display_name %></td>
-          <td><%= p.age.to_i %></td>
-          <td><%= p.id_number %></td>
-          <td>
+          <td style="background-color: <%= deleted_background_color%>"><%= p.record_number %></td>
+          <td style="background-color: <%= deleted_background_color%>"><%= p.first_name %></td>
+          <td style="background-color: <%= deleted_background_color%>"><%= p.last_name %></td>
+          <td style="background-color: <%= deleted_background_color%>"><%= Gender.find(p.gender_id).display_name %></td>
+          <td style="background-color: <%= deleted_background_color%>"><%= p.age.to_i %></td>
+          <td style="background-color: <%= deleted_background_color%>"><%= p.id_number %></td>
+          <td style="background-color: <%= deleted_background_color%>">
             <%= link_to '', edit_pacient_path(p), class: 'glyphicon glyphicon-edit' %>
-            <%= link_to '', pacient_path(p), class: 'glyphicon glyphicon-trash', confirm: 'Está seguro que desea Eliminar este paciente?' %>
+            <%= link_to '', pacient_path(p), method: :delete, class: 'glyphicon glyphicon-trash', data: { confirm: 'Está seguro que desea Eliminar este paciente?' } %>
           </td>
         </tr>
       <% end %>

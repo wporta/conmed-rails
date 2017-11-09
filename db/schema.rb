@@ -67,16 +67,17 @@ ActiveRecord::Schema.define(version: 20170721172302) do
   end
 
   create_table "pacients", force: :cascade do |t|
-    t.string   "first_name",    null: false
-    t.string   "last_name",     null: false
+    t.string   "first_name",     null: false
+    t.string   "last_name",      null: false
     t.string   "id_number"
     t.string   "phone"
     t.string   "email"
-    t.decimal  "age",           null: false
+    t.decimal  "age",            null: false
     t.integer  "gender_id"
-    t.string   "record_number", null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "record_number",  null: false
+    t.boolean  "pacient_active", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["gender_id"], name: "index_pacients_on_gender_id", using: :btree
   end
 
