@@ -32,7 +32,7 @@
           <td>
             <%= link_to '', appointment_path(p), class: 'glyphicon glyphicon-eye-open' %>
             <%= link_to '', edit_appointment_path(p), class: 'glyphicon glyphicon-edit' %>
-            <%= link_to '', pacient_path(p), class: 'glyphicon glyphicon-trash', confirm: 'Está seguro que desea Eliminar este paciente?' %>
+            <%= link_to '', appointment_path(p), method: :delete, class: 'glyphicon glyphicon-trash', data: { confirm: 'Está seguro que desea Eliminar esta cita?' } %>
           </td>
         </tr>
     <% end %>
