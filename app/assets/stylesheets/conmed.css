@@ -5,3 +5,8 @@
 .botones-a-la-derecha {
     text-align: right;
 }
+
+.background-color-deleted-records {
+    background-color: #c00;
+    color: #ffffff;
+}

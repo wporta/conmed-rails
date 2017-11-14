@@ -8,7 +8,8 @@ class CreatePacients < ActiveRecord::Migration[5.0]
       t.string :email
       t.numeric :age, null: false
       t.references :gender
-      t.string :record_number, null:false
+      t.string :record_number, null: false
+      t.boolean :pacient_active, null: false, dafault: true
 
       t.timestamps
     end

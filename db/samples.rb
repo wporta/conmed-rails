@@ -5,7 +5,8 @@ pacients = [{
                 email: 'jdoe@conmed.com',
                 age: 37,
                 gender: 1,
-                record_number: '000-000-0001'
+                record_number: '000-000-0001',
+                pacient_active: true
             },
             {
                 first_name:  'Ana',
@@ -14,7 +15,8 @@ pacients = [{
                 email: 'abanana@conmed.com',
                 age: 17,
                 gender: 2,
-                record_number: '000-000-0002'
+                record_number: '000-000-0002',
+                pacient_active: true
             }]
 
 
@@ -28,5 +30,6 @@ pacients.each do |p|
     a.age = p[:age]
     a.gender_id = p[:gender]
     a.record_number = p[:record_number]
+    a.pacient_active = p[:pacient_active]
   end
 end
