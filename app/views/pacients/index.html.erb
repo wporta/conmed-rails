@@ -39,7 +39,9 @@
           <td style="background-color: <%= deleted_background_color%>"><%= p.id_number %></td>
           <td style="background-color: <%= deleted_background_color%>">
             <%= link_to '', edit_pacient_path(p), class: 'glyphicon glyphicon-edit' %>
-            <%= link_to '', pacient_path(p), method: :delete, class: 'glyphicon glyphicon-trash', data: { confirm: 'Está seguro que desea Eliminar este paciente?' } %>
+            <% if p.pacient_active? %>
+              <%= link_to '', pacient_path(p), method: :delete, class: 'glyphicon glyphicon-trash', data: { confirm: 'Está seguro que desea Eliminar este paciente?' } %>
+            <% end %>
           </td>
         </tr>
       <% end %>
