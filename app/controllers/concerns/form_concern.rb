@@ -46,6 +46,16 @@ module FormConcern
     [:create, :update].each do |method|
       define_method(method) {save}
     end
+
+    def destroy
+      begin
+        id = params[:id]
+        @record = model.find(params[:id])
+        @record.destroy
+        redirect_to index_path
+      end
+    end
+
   end
 
   private
@@ -114,4 +124,5 @@ module FormConcern
       render back_path
     end
   end
+
 end
