@@ -7,7 +7,7 @@ and I'll love any feedback to improve this small application.
 
 === Ruby version
 
-I am currently developing ConMed using Ruby 2.4
+I am currently developing *ConMed* using Ruby 2.4
 
 === System dependencies
 * rvm 1.28.0
@@ -16,9 +16,10 @@ I am currently developing ConMed using Ruby 2.4
 
 === Database creation and initialization
 Once you cloned the repo, you should be able to execute:
-rake db:create && rake db:migrate && rake db:seed
+
+```rake db:create && rake db:migrate && rake db:seed```
 
 === Sample Data
 There is some small sample data in case you want to play around:
-rake db:sample
 
+```rake db:sample```
