@@ -22,7 +22,7 @@
         <% pacient =  Pacient.find(p.pacient_id) %>
         <tr>
           <td><%= pacient.display_name %></td>
-          <td><%= p.medical_consultation_date %></td>
+          <td><%= p.medical_consultation_date.strftime("%d/%m/%Y %r") %></td>
           <td>
             <%= link_to '', medical_consultation_path(p), class: 'glyphicon glyphicon-eye-open' %>
             <%= link_to '', edit_medical_consultation_path(p), class: 'glyphicon glyphicon-edit' %>
