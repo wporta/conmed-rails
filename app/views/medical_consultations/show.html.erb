@@ -51,7 +51,7 @@
 
         <div class="form-group <%= 'has-error' if @record.errors[:next_date].present? %>">
           <label class="control-label" for="next_date">Fecha de la Próxima Consulta:</label>
-          <%= @record.next_date.strftime("%d/%m/%Y %r") %>
+          <%= @record.next_date.try(:strftime, "%d/%m/%Y %r") %>
         </div>
 
         <div class="botones-a-la-derecha">
