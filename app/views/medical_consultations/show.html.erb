@@ -15,18 +15,18 @@
         </div>
 
         <div class="form-group <%= 'has-error' if @record.errors[:weight].present? %>">
-          <label class="control-label" for="weight">Peso:</label>
+          <label class="control-label" for="weight">Peso (Lbs):</label>
           <%= @record.weight %>
         </div>
 
         <div class="form-group <%= 'has-error' if @record.errors[:height].present? %>">
-          <label class="control-label" for="height">Altura:</label>
+          <label class="control-label" for="height">Altura (cm):</label>
           <%= @record.height %>
         </div>
 
         <div class="form-group <%= 'has-error' if @record.errors[:blood_preasure].present? %>">
-          <label class="control-label" for="blood_preasure">Presión Sanguínea:</label>
-          <%= @record.blood_preasure %>
+          <label class="control-label" for="blood_preasure">Presión Sanguínea (SYS/SIA):</label>
+          <%= @record.blood_preasure %> 
         </div>
 
         <div class="form-group <%= 'has-error' if @record.errors[:symptoms].present? %>">
