@@ -52,7 +52,7 @@
     <div class="form-group <%= 'has-error' if @record.errors[:next_date].present? %>">
       <label class="control-label" for="next_date">Fecha de la Próxima Consulta:</label>
       <div class="input-group date" id="fecha-proxima-consulta">
-        <%= f.text_field :next_date, class: 'form-control', placeholder: 'Fecha de la Próxima Consulta', required: true, value: @record.medical_consultation_date.try(:strftime, "%d/%m/%Y %r") %>
+        <%= f.text_field :next_date, class: 'form-control', placeholder: 'Fecha de la Próxima Consulta', value: @record.next_date.try(:strftime, "%d/%m/%Y %r") %>
         <span class="input-group-addon">
           <span class="glyphicon glyphicon-time"></span>
         </span>
