@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :pacients
   resources :appointments
   resources :medical_consultations
+  resources :medical_consultation_payments
 
   root 'dashboard#main'
 end
