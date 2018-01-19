@@ -1,0 +1,22 @@
+<%= form_for @record, url: medical_consultation_payment_path(@record) do |f| %>
+    <div class="form-group <%= 'has-error' if @record.errors[:pacient].present? %>">
+      <label class="control-label" for="pacient_id">Paciente:</label>
+      <%= Pacient.find(@record.pacient_id).display_name %>
+    </div>
+
+    <div class="form-group <%= 'has-error' if @record.errors[:medical_consultation_date].present? %>">
+      <label class="control-label" for="medical_consultation_date">Fecha de la Consulta:</label>
+      <%= @record.medical_consultation_date.strftime("%d/%m/%Y %r") %>
+    </div>
+
+    <div class="form-group <%= 'has-error' if @record.errors[:cost].present? %>">
+      <label class="control-label" for="cost">Costo (C$):</label>
+      <%= f.text_field :cost, class: 'form-control', placeholder: 'Costo' %>
+    </div>
+
+    <div class="botones-a-la-derecha">
+      <%= f.submit "Guardar", class: 'btn btn-primary'%>
+      <%= link_to 'Cancelar', medical_consultation_payments_path, class: 'btn btn-danger' %>
+    </div>
+
+<% end %>
