@@ -25,7 +25,7 @@
           <td><%= p.medical_consultation_date.strftime("%d/%m/%Y %r") %></td>
           <td><%= p.cost.nil? ? '' : 'C$ ' + p.cost.to_s %></td>
           <td>
-            <%= link_to '', edit_medical_consultation_payment_path(p), class: 'glyphicon glyphicon-usd' %>
+            <%= link_to 'Registrar Pago', edit_medical_consultation_payment_path(p), class: 'btn btn-primary center-block' %>
           </td>
         </tr>
     <% end %>

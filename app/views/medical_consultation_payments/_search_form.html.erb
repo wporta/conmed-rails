@@ -1,4 +1,4 @@
-<%= search_form_for @q do |f| %>
+<%= search_form_for(@q, url: medical_consultation_payments_path) do |f| %>
     <div class="row">
       <div class="col-md-9 col-lg-9">
         <%= f.search_field :pacient_first_name_or_pacient_last_name_cont, class: 'form-control', placeholder: 'Buscar...' %>
