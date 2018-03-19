@@ -1,5 +1,5 @@
 # Let's use Faker to create 100 pacients to test our system
-(1..100).each do |i|
+100.times do
   Pacient.create! do |a|
     a.first_name = Faker::Name.unique.name
     a.last_name =  Faker::Name.name
