@@ -7,7 +7,6 @@ class Pacient < ActiveRecord::Base
   validates :gender_id, presence: true
   validates :record_number, presence: true
 
-
   def display_name
     [self.first_name, self.last_name].join(' ')
   end

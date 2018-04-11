@@ -64,7 +64,7 @@ module FormConcern
   # Optiene la coleccion de datos correspondiente al modelo al que pertenece al controlador
   def scoped_collection
     @q = model.ransack(params[:q])
-    @records = @q.result
+    @records = @q.result.page(params[:page]).per(10)
   end
 
   ##
