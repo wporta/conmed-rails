@@ -6,7 +6,7 @@ class CreatePacients < ActiveRecord::Migration[5.0]
       t.string :id_number
       t.string :phone
       t.string :email
-      t.numeric :age, null: false
+      t.integer :age, null: false
       t.references :gender
       t.string :record_number, null: false
       t.boolean :pacient_active, null: false, dafault: true

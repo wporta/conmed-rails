@@ -64,3 +64,10 @@ es:
       not_saved:
         one: "Ha ocurrido 1 error:"
         other: "Han ocurrido %{count} errores:"
+  views:
+    pagination:
+      previous: "&lt; Anterior"
+      next: "Siguiente &gt;"
+      first: "&lt;&lt; Inicio"
+      last: "Final &gt;&gt;"
+      truncate: "..."

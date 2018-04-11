@@ -1,7 +1,7 @@
 namespace :db do
-  desc "Crear datos de ejemplo."
-  task :sample => ['db:ensure_development_or_staging', 'environment'] do
-    sample_file = 'db/samples.rb'
+  desc "Creating Fake Pacients data"
+  task :fake_data => ['db:ensure_development_or_staging', 'environment'] do
+    sample_file = 'db/fake_data.rb'
     load(sample_file) if File.exists?(sample_file)
   end
 

@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20170721172302) do
     t.string   "id_number"
     t.string   "phone"
     t.string   "email"
-    t.decimal  "age",            null: false
+    t.integer  "age",            null: false
     t.integer  "gender_id"
     t.string   "record_number",  null: false
     t.boolean  "pacient_active", null: false
