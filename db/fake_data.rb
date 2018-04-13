@@ -11,3 +11,12 @@
     a.pacient_active = true
   end
 end
+
+# Lets create fake appointments
+100.times do
+  Appointment.create! do |a|
+    a.pacient_id = Faker::Number.between(1,100)
+    a.appointment_date = Faker::Date.between(15.days.ago, 15.days.from_now)
+    a.notes = Faker::ChuckNorris.fact
+  end
+end
