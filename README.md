@@ -20,4 +20,4 @@ Once you cloned the repo, you should be able to execute:
 #### Sample Data
 There is some small sample data in case you want to play around:
 
-`rake db:sample`
+`rake db:fake_data`
