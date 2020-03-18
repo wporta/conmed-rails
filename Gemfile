@@ -36,7 +36,7 @@ gem 'puma', '~> 3.12'
 # gem 'capistrano-rails', group: :development
 
 # Use Devise for Authentication
-gem 'devise', '~> 4.3'
+gem 'devise', '~> 4.7'
 # Datepicker
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
