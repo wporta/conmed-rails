@@ -44,7 +44,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'ransack', '~> 1.8', '>= 1.8.3'
 
 gem 'select2-rails'
-gem 'kaminari', '~> 1.2.0'
+gem 'kaminari', '~> 1.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
